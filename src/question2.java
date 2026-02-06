@@ -16,3 +16,7 @@ public class question2 {
         }
     }
 }
+
+//this is an runtime exception because the exception is thrown after compiling the code,when
+//the user enter age less than 18 then the exception is thrown manually,
+//that's why this is runtime exception
