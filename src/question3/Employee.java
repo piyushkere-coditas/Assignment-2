@@ -17,7 +17,7 @@ class FullTimeEmployee extends Employee{
 class PartTimeEmployee extends Employee{
     @Override
     String calculateSalary() {
-        return "PartTimeEmployee Salary";
+        return "PartTimeEmployee's Salary";
     }
 }
 

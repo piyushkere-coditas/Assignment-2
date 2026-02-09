@@ -1,5 +1,11 @@
 import java.util.*;
 
+class InvalidAgeException extends RuntimeException{
+    InvalidAgeException(String str){
+        super(str);
+    }
+}
+
 public class question2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -8,15 +14,15 @@ public class question2 {
         try{
             int age = sc.nextInt();
             if(age<18){
-                throw new InputMismatchException("InvalidAgeException");
+                throw new InvalidAgeException("Invalid age");
             }
         }
-        catch(InputMismatchException e){
+        catch(InvalidAgeException e){
             System.out.println("Invalid Age: "+e.getMessage());
+        }
+        finally {
+            System.out.println("Program Executed");
         }
     }
 }
 
-//this is an runtime exception because the exception is thrown after compiling the code,when
-//the user enter age less than 18 then the exception is thrown manually,
-//that's why this is runtime exception
